@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DepartmentManagement</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>List Department</h1>
+		</div>
+		<div class="row">
+			<div class="col-lg-3">
+				<a th:href="@{/Department}" class="btn btn-primary btn-sm mb-3">
+					Add Department</a>
+			</div>
+		</div>
+		<table class="table table-striped table-dark">
+			<thead class="table table-dark">
+				<tr>
+					<th>departmentName</th>
+					<th>departmentAddress</th>
+					<th>departmentCode</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="Department:${Department}">
+					<td th:text="${Department.Name}"></td>
+					<td th:text="${Department.Address}"></td>
+					<td th:text="${Department.Code}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
