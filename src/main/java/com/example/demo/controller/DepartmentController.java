@@ -45,10 +45,5 @@ public class DepartmentController {
 		return "Deleted Successfully";
 	}
 	
-	
-	@GetMapping("/get")
-	public String  get() {
-		return "pravalika";
-	}
 
 }
