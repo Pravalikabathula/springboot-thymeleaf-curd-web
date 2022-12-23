@@ -44,5 +44,11 @@ public class DepartmentController {
 		departmentService.deleteDepartmentById(departmentId);
 		return "Deleted Successfully";
 	}
+	
+	
+	@GetMapping("/get")
+	public String  get() {
+		return "pravalika";
+	}
 
 }
